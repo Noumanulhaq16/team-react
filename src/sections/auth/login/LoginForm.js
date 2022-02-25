@@ -31,9 +31,9 @@ export default function LoginForm() {
   });
 
   const defaultValues = {
-    email: '',
-    password: '',
-    rememberme: true,
+    email: 'demo@minimals.cc',
+    password: 'demo1234',
+    remember: true,
   };
 
   const methods = useForm({
@@ -50,7 +50,7 @@ export default function LoginForm() {
 
   const onSubmit = async (data) => {
     try {
-      await login(data.email, data.password, data.rememberme);
+      await login(data.email, data.password);
     } catch (error) {
       console.error(error);
       reset();
@@ -84,7 +84,7 @@ export default function LoginForm() {
       </Stack>
 
       <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ my: 2 }}>
-        <RHFCheckbox name="rememberme" label="Remember me" />
+        <RHFCheckbox name="remember" label="Remember me" />
         <Link component={RouterLink} variant="subtitle2" to={PATH_AUTH.resetPassword}>
           Forgot password?
         </Link>

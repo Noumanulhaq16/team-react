@@ -24,11 +24,11 @@ export default function AccountGeneral() {
   const { user } = useAuth();
 
   const UpdateUserSchema = Yup.object().shape({
-    displayName: Yup.string().required('Name is required'),
+    name: Yup.string().required('Name is required'),
   });
 
   const defaultValues = {
-    displayName: user?.name || '',
+    name: user?.name || '',
     email: user?.email || '',
     photoURL: user?.photoURL || '',
     phoneNumber: user?.phoneNumber || '',
@@ -118,7 +118,7 @@ export default function AccountGeneral() {
                 gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' },
               }}
             >
-              <RHFTextField name="displayName" label="Name" />
+              <RHFTextField name="name" label="Name" />
               <RHFTextField name="email" label="Email Address" />
 
               <RHFTextField name="phoneNumber" label="Phone Number" />

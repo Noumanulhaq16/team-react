@@ -203,7 +203,7 @@ function AuthProvider({ children }) {
         ...state,
         method: 'cognito',
         user: {
-          displayName: state?.user?.name || 'Teams Track',
+          name: state?.user?.name || 'Minimals',
           role: 'admin',
           ...state.user,
         },

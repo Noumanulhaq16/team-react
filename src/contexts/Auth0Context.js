@@ -110,7 +110,7 @@ function AuthProvider({ children }) {
           id: state?.user?.sub,
           photoURL: state?.user?.picture,
           email: state?.user?.email,
-          displayName: 'Jaydon Frankie',
+          name: 'Jaydon Frankie',
           role: 'admin',
         },
         login,

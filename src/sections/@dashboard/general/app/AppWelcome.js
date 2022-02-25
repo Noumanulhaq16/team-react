@@ -23,10 +23,10 @@ const RootStyle = styled(Card)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 AppWelcome.propTypes = {
-  displayName: PropTypes.string,
+  name: PropTypes.string,
 };
 
-export default function AppWelcome({ displayName }) {
+export default function AppWelcome({ name }) {
   return (
     <RootStyle>
       <CardContent
@@ -38,7 +38,7 @@ export default function AppWelcome({ displayName }) {
       >
         <Typography gutterBottom variant="h4">
           Welcome back,
-          <br /> {!displayName ? '...' : displayName}!
+          <br /> {!name ? '...' : name}!
         </Typography>
 
         <Typography variant="body2" sx={{ pb: { xs: 3, xl: 5 }, maxWidth: 480, mx: 'auto' }}>

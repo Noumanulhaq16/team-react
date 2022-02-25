@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 // routes
 import Router from './routes';
 // theme
@@ -12,10 +13,13 @@ import NotistackProvider from './components/NotistackProvider';
 import ThemeColorPresets from './components/ThemeColorPresets';
 import ThemeLocalization from './components/ThemeLocalization';
 import MotionLazyContainer from './components/animate/MotionLazyContainer';
+// import useAuth from './hooks/useAuth';
 
 // ----------------------------------------------------------------------
 
 export default function App() {
+  // const { ChangePath } = useAuth();
+  // useEffect(() => { ChangePath()}, [window.location.pathname] )
   return (
     <ThemeProvider>
       <ThemeColorPresets>

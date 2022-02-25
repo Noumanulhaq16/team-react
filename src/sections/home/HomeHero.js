@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import { Button, Box, Link, Container, Typography, Stack } from '@mui/material';
 // routes
-import { PATH_DASHBOARD } from '../../routes/paths';
+// import { PATH_DASHBOARD } from '../../routes/paths';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';

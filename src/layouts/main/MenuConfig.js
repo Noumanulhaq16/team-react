@@ -1,7 +1,7 @@
 // routes
 import { PATH_AUTH, PATH_DOCS, PATH_PAGE } from '../../routes/paths';
 // components
-import { PATH_AFTER_LOGIN } from '../../config';
+// import { PATH_AFTER_LOGIN } from '../../config';
 // components
 import Iconify from '../../components/Iconify';
 
@@ -13,11 +13,11 @@ const ICON_SIZE = {
 };
 
 const menuConfig = [
-  {
-    title: 'Home',
-    icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
-    path: '/',
-  },
+  // {
+  //   title: 'Home',
+  //   icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
+  //   path: '/',
+  // },
   // {
   //   title: 'Pages',
   //   path: '/pages',
@@ -57,11 +57,11 @@ const menuConfig = [
   //     },
   //   ],
   // },
-  {
-    title: 'Login',
-    icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
-    path: PATH_AUTH.login,
-  },
+  // {
+  //   title: 'Login',
+  //   icon: <Iconify icon={'eva:book-open-fill'} {...ICON_SIZE} />,
+  //   path: PATH_AUTH.login,
+  // },
 ];
 
 export default menuConfig;

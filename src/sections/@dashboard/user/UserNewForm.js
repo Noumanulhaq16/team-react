@@ -12,7 +12,7 @@ import { Box, Card, Grid, Stack, Switch, Typography, FormControlLabel } from '@m
 // utils
 import { fData } from '../../../utils/formatNumber';
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import { PATH_SUPERADMIN } from '../../../routes/paths';
 // _mock
 import { countries } from '../../../_mock';
 // components
@@ -95,7 +95,7 @@ export default function UserNewForm({ isEdit, currentUser }) {
       await new Promise((resolve) => setTimeout(resolve, 500));
       reset();
       enqueueSnackbar(!isEdit ? 'Create success!' : 'Update success!');
-      navigate(PATH_DASHBOARD.user.list);
+      navigate(PATH_SUPERADMIN.user.list);
     } catch (error) {
       console.error(error);
     }

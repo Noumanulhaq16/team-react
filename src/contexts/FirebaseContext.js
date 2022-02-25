@@ -96,7 +96,7 @@ function AuthProvider({ children }) {
       await setDoc(userRef, {
         uid: res.user?.uid,
         email,
-        displayName: `${firstName} ${lastName}`,
+        name: `${firstName} ${lastName}`,
       });
     });
 
@@ -111,7 +111,7 @@ function AuthProvider({ children }) {
           id: state?.user?.uid,
           email: state?.user?.email,
           photoURL: state?.user?.photoURL || profile?.photoURL,
-          displayName: state?.user?.name || profile?.displayName,
+          name: state?.user?.name || profile?.name,
           role: ADMIN_EMAILS.includes(state?.user?.email) ? 'admin' : 'user',
           phoneNumber: state?.user?.phoneNumber || profile?.phoneNumber || '',
           country: profile?.country || '',

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import * as Yup from 'yup';
 // form
@@ -8,6 +9,8 @@ import { Stack } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 // hooks
 import useIsMountedRef from '../../../hooks/useIsMountedRef';
+import useAuth from '../../../hooks/useAuth';
+
 // components
 import { FormProvider, RHFTextField } from '../../../components/hook-form';
 
@@ -20,14 +23,15 @@ ResetPasswordForm.propTypes = {
 
 export default function ResetPasswordForm({ onSent, onGetEmail }) {
   const isMountedRef = useIsMountedRef();
-
+  const { resetpassword, ChangePath } = useAuth();
+  useEffect(() => { ChangePath() }, [window.location.pathname])
   const ResetPasswordSchema = Yup.object().shape({
     email: Yup.string().email('Email must be a valid email address').required('Email is required'),
   });
 
   const methods = useForm({
     resolver: yupResolver(ResetPasswordSchema),
-    defaultValues: { email: 'demo@minimals.cc' },
+    defaultValues: { email: '' },
   });
 
   const {
@@ -37,7 +41,7 @@ export default function ResetPasswordForm({ onSent, onGetEmail }) {
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await resetpassword(data.email);
       if (isMountedRef.current) {
         onSent();
         onGetEmail(data.email);

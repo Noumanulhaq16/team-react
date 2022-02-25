@@ -1,10 +1,9 @@
 // routes
-import { PATH_DASHBOARD } from './routes/paths';
+import { PATH_ADMIN, PATH_AGENT, PATH_SALEMAN, PATH_SUPERADMIN } from './routes/paths';
 
 // API
 // ----------------------------------------------------------------------
-
-export const HOST_API = 'http://127.0.0.1:8000' || '';
+export const HOST_API = 'http://overwatchapi.devml.xyz/' || 'https://overwatchapi.hnhclient.xyz';
 
 export const FIREBASE_API = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -31,9 +30,12 @@ export const MAPBOX_API = process.env.REACT_APP_MAPBOX;
 
 
 // ROOT PATH AFTER LOGIN SUCCESSFUL
-export const PATH_AFTER_LOGIN = PATH_DASHBOARD.general.app; // as '/dashboard/app'
+export const PATH_AFTER_SUPERADMIN_LOGIN = PATH_SUPERADMIN.general.dashboard; // as '/dashboard'
+export const PATH_AFTER_ADMIN_LOGIN = PATH_ADMIN.general.dashboard; // as '/dashboard'
+export const PATH_AFTER_AGENT_LOGIN = PATH_AGENT.general.dashboard; // as '/dashboard'
+export const PATH_AFTER_CONTRACTOR_LOGIN = PATH_SALEMAN.general.dashboard; // as '/dashboard'
 
-// LAYOUT
+// LAYOUT PATH_AFTER_CONTRACTOR_LOGIN
 // ----------------------------------------------------------------------
 
 export const HEADER = {
@@ -62,10 +64,11 @@ export const ICON = {
 // Please remove `localStorage` when you set settings.
 // ----------------------------------------------------------------------
 
+
 export const defaultSettings = {
   themeMode: 'light',
   themeDirection: 'ltr',
-  themeColorPresets: 'blue',
+  themeColorPresets: 'orange',
   themeLayout: 'horizontal',
   themeStretch: false,
 };

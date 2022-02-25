@@ -41,9 +41,9 @@ export default function ComingSoon() {
     <Page title="Coming Soon" sx={{ height: 1 }}>
       <RootStyle>
         <Container>
-          <Box sx={{ maxWidth: 480, margin: 'auto', textAlign: 'center' }}>
+          <Box sx={{ maxWidth: 480, margin: ' auto', textAlign: 'center' }}>
             <Typography variant="h3" paragraph>
-              Coming Soon!
+              Teams <br /> Coming Soon!
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>We are currently working hard on this page!</Typography>
 
@@ -77,7 +77,7 @@ export default function ComingSoon() {
               </div>
             </CountdownStyle>
 
-            <InputStyle
+            {/* <InputStyle
               fullWidth
               placeholder="Enter your email"
               InputProps={{
@@ -90,11 +90,11 @@ export default function ComingSoon() {
                 ),
               }}
               sx={{ my: 5, '& .MuiOutlinedInput-root': { pr: 0.5 } }}
-            />
+            /> */}
 
-            <Stack alignItems="center">
+            {/* <Stack alignItems="center">
               <SocialsButton size="large" initialColor />
-            </Stack>
+            </Stack> */}
           </Box>
         </Container>
       </RootStyle>

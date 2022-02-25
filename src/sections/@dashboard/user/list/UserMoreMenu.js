@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { MenuItem, IconButton } from '@mui/material';
 // routes
-import { PATH_DASHBOARD } from '../../../../routes/paths';
+import { PATH_CUSTOMER } from '../../../../routes/paths';
 // components
 import Iconify from '../../../../components/Iconify';
 import MenuPopover from '../../../../components/MenuPopover';
@@ -57,11 +57,15 @@ export default function UserMoreMenu({ onDelete, userName }) {
           <Iconify icon={'eva:trash-2-outline'} sx={{ ...ICON }} />
           Delete
         </MenuItem>
-
-        <MenuItem component={RouterLink} to={`${PATH_DASHBOARD.user.root}/${paramCase(userName)}/edit`}>
+        {/* 
+        <MenuItem component={RouterLink} to={PATH_CUSTOMER.general.SalesLeadForm}>
           <Iconify icon={'eva:edit-fill'} sx={{ ...ICON }} />
           Edit
-        </MenuItem>
+        </MenuItem> */}
+        {/* <MenuItem component={RouterLink} to={`${PATH_CUSTOMER.general.root}/${paramCase(userName)}/edit`}>
+          <Iconify icon={'eva:edit-fill'} sx={{ ...ICON }} />
+          Edit
+        </MenuItem> */}
       </MenuPopover>
     </>
   );
